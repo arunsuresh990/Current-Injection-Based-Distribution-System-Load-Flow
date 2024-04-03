@@ -5,9 +5,9 @@ Ibusstar = zeros(NumN*3,1);
 for k = 1:System.NumG
       N1 = System.Generators(k,1); %node of load          
       Sstar = zeros(3,1);
-      Sstar(1) = (System.Generators(k,12) + j*(System.Generators(k,13)))/Sbase; 
-      Sstar(2) = (System.Generators(k,14) + j*(System.Generators(k,15)))/Sbase; 
-      Sstar(3) = (System.Generators(k,16) + j*(System.Generators(k,17)))/Sbase;
+      Sstar(1) = (System.Generators(k,4) + j*(System.Generators(k,5)))/Sbase; 
+      Sstar(2) = (System.Generators(k,6) + j*(System.Generators(k,7)))/Sbase; 
+      Sstar(3) = (System.Generators(k,8) + j*(System.Generators(k,9)))/Sbase;
       
       V=vPr(3*N1-2:3*N1);  
       Ibusstar(3*N1-2) =Ibusstar(3*N1-2)+ conj(Sstar(1)/V(1));
